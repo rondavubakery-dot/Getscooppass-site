@@ -2,10 +2,246 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>ScoopPass</title>
+  <title>ScoopPass – Prepaid Dessert & Fundraisers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+        content="ScoopPass helps dessert vendors, schools, and event organizers pre-sell treats, shorten lines, and track every dollar.">
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    a { color: #2563eb; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .page {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 24px 16px 48px;
+    }
+    .hero {
+      padding: 40px 0 32px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2.2rem;
+      margin-bottom: 12px;
+    }
+    .hero p {
+      font-size: 1.05rem;
+      margin-bottom: 20px;
+    }
+    .hero-small {
+      font-size: 0.95rem;
+      color: #52606d;
+      margin-bottom: 24px;
+    }
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1px solid transparent;
+    }
+    .btn-primary {
+      background: #2563eb;
+      color: #fff;
+      border-color: #2563eb;
+    }
+    .btn-secondary {
+      background: #fff;
+      color: #2563eb;
+      border-color: #cbd2d9;
+    }
+
+    section {
+      margin: 32px 0;
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px 20px 24px;
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.04);
+    }
+    section h2 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-size: 1.4rem;
+    }
+    section p {
+      margin: 8px 0;
+      font-size: 0.98rem;
+    }
+
+    .three-cols {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 12px;
+    }
+    .card {
+      border-radius: 10px;
+      border: 1px solid #e4e7eb;
+      padding: 14px 14px 16px;
+      background: #f9fafb;
+    }
+    .card h3 {
+      margin: 0 0 6px;
+      font-size: 1.05rem;
+    }
+    .card p {
+      margin: 4px 0;
+      font-size: 0.95rem;
+    }
+
+    .list {
+      margin: 10px 0;
+      padding-left: 20px;
+      font-size: 0.96rem;
+    }
+    .list li {
+      margin-bottom: 4px;
+    }
+
+    .footer {
+      margin-top: 32px;
+      font-size: 0.8rem;
+      color: #7b8794;
+      text-align: center;
+    }
+    .footer a {
+      color: #7b8794;
+      margin: 0 6px;
+    }
+    @media (max-width: 640px) {
+      .hero h1 {
+        font-size: 1.7rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>ScoopPass Landing Site</h1>
-  <p>Coming soon.</p>
+  <div class="page">
+    <!-- HERO -->
+    <header class="hero">
+      <p class="hero-small">Prepaid dessert & fundraiser platform</p>
+      <h1>Sell more dessert. Skip the cash hassle.</h1>
+      <p>
+        ScoopPass is the easiest way for vendors and fundraisers to pre-sell treats,
+        shorten lines, and track every dollar.
+      </p>
+      <p class="hero-small">
+        Built by a real dessert business for food trucks, shave ice, bakeries, schools, and youth fundraisers.
+      </p>
+      <div class="hero-buttons">
+        <a class="btn btn-primary" href="#demo">Book a 15-minute demo</a>
+        <a class="btn btn-secondary" href="#fundraisers">See how a fundraiser works</a>
+      </div>
+    </header>
+
+    <!-- WHO IT'S FOR -->
+    <section id="audiences">
+      <h2>One platform, three big wins.</h2>
+      <div class="three-cols">
+        <div class="card">
+          <h3>Dessert vendors</h3>
+          <p>Pre-sell servings so you can prep smarter and move lines faster.</p>
+        </div>
+        <div class="card">
+          <h3>Schools & nonprofits</h3>
+          <p>Run dessert fundraisers without catalog chaos or cash counting.</p>
+        </div>
+        <div class="card">
+          <h3>Event organizers</h3>
+          <p>Offer a better guest experience and happier vendors with prepay.</p>
+        </div>
+      </div>
+      <p style="margin-top:16px; text-align:center;">
+        <a href="/vendors">Vendors</a> ·
+        <a href="/fundraisers">Fundraisers</a> ·
+        <a href="/organizers">Events</a>
+      </p>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how">
+      <h2>Prepay in three simple steps.</h2>
+      <ol class="list">
+        <li><strong>Create your offer.</strong> Set up your event, fundraiser, or menu in minutes—name your items, quantities, prices, and dates.</li>
+        <li><strong>Share your ScoopPass link.</strong> Post your link and QR code on Facebook, email, flyers, and texts. Families and guests buy ahead from any device.</li>
+        <li><strong>Serve with speed and confidence.</strong> On event day, scan QR codes or check names off the list. You know exactly what to bring and who ordered.</li>
+      </ol>
+      <p><a href="#demo">See a live example (demo).</a></p>
+    </section>
+
+    <!-- WHY PREPAY -->
+    <section id="benefits">
+      <h2>Stop guessing. Start planning with real orders.</h2>
+      <ul class="list">
+        <li><strong>No more cash chaos.</strong> Parents and guests pay online before the event.</li>
+        <li><strong>Shorter lines, more smiles.</strong> Prepaid orders keep lines flowing and impulse buyers happy.</li>
+        <li><strong>Less waste, more profit.</strong> Prep based on actual orders, not “best guesses.”</li>
+        <li><strong>Cleaner bookkeeping.</strong> See totals, payouts, and reports in one place.</li>
+      </ul>
+    </section>
+
+    <!-- ORIGIN STORY -->
+    <section id="about">
+      <h2>Built from a dessert trailer, not a boardroom.</h2>
+      <p>
+        ScoopPass is built by the owner of a mobile dessert and shave ice business.
+        After years of long lines, cash envelopes, and messy fundraisers, we designed a prepay
+        system that actually works in the real world.
+      </p>
+      <ul class="list">
+        <li>Designed around food trucks, shave ice, and pop-up dessert vendors.</li>
+        <li>Proven with school events, youth sports, and community fundraisers.</li>
+        <li>Focused on simple, practical workflows your volunteers and staff can actually follow.</li>
+      </ul>
+      <p><a href="#demo">Tell us about your next event.</a></p>
+    </section>
+
+    <!-- GET STARTED -->
+    <section id="demo">
+      <h2>Try ScoopPass on your next event or fundraiser.</h2>
+      <p>
+        We’ll help you set up your first prepay offer, promote it, and review the results with you.
+        No long contracts—just a clear test that shows you how much smoother dessert can be.
+      </p>
+      <div class="hero-buttons" style="margin-top:12px;">
+        <a class="btn btn-primary" href="#contact">Schedule a 15-minute Prepay Planning Call</a>
+        <a class="btn btn-secondary" href="#contact">Request pricing</a>
+      </div>
+    </section>
+
+    <!-- CONTACT PLACEHOLDER -->
+    <section id="contact">
+      <h2>Contact ScoopPass</h2>
+      <p>Drop in your form here (Netlify form, Supabase form, or a link to Calendly).</p>
+      <p>Email placeholder: <a href="mailto:hello@getscooppass.com">hello@getscooppass.com</a></p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>
+        ScoopPass is a prepay platform built from real dessert and shave ice events.
+        We help vendors, schools, and organizers serve more people, raise more money,
+        and simplify dessert—one event at a time.
+      </p>
+      <p>
+        <a href="#about">About</a> ·
+        <a href="#contact">Contact</a> ·
+        <a href="#benefits">Why Prepay</a>
+      </p>
+    </footer>
+  </div>
 </body>
 </html>
