@@ -2,10 +2,253 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>ScoopPass - Fundraisers</title>
+  <title>ScoopPass for Fundraisers – Simple Dessert Fundraising</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+        content="ScoopPass turns dessert sales into a simple digital fundraiser for PTOs, booster clubs, youth sports, and churches. No catalogs, no cash envelopes.">
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    a { color: #2563eb; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .page {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 24px 16px 48px;
+    }
+    .hero {
+      padding: 36px 0 28px;
+      text-align: left;
+    }
+    .hero h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 1.02rem;
+      margin-bottom: 16px;
+    }
+    .hero-small {
+      font-size: 0.92rem;
+      color: #52606d;
+      margin-bottom: 18px;
+    }
+    .hero-buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-block;
+      padding: 9px 16px;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1px solid transparent;
+    }
+    .btn-primary {
+      background: #2563eb;
+      color: #fff;
+      border-color: #2563eb;
+    }
+    .btn-secondary {
+      background: #fff;
+      color: #2563eb;
+      border-color: #cbd2d9;
+    }
+
+    section {
+      margin: 28px 0;
+      background: #fff;
+      border-radius: 12px;
+      padding: 18px 20px 22px;
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.04);
+    }
+    section h2 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 1.35rem;
+    }
+    section p {
+      margin: 6px 0;
+      font-size: 0.97rem;
+    }
+
+    .list {
+      margin: 8px 0;
+      padding-left: 20px;
+      font-size: 0.96rem;
+    }
+    .list li {
+      margin-bottom: 4px;
+    }
+    .cols {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      margin-top: 10px;
+    }
+    .card {
+      border-radius: 10px;
+      border: 1px solid #e4e7eb;
+      padding: 12px 14px 14px;
+      background: #f9fafb;
+    }
+    .card h3 {
+      margin: 0 0 6px;
+      font-size: 1.02rem;
+    }
+    .card p {
+      margin: 4px 0;
+      font-size: 0.94rem;
+    }
+
+    .footer {
+      margin-top: 32px;
+      font-size: 0.8rem;
+      color: #7b8794;
+      text-align: center;
+    }
+    .footer a {
+      color: #7b8794;
+      margin: 0 6px;
+    }
+    @media (max-width: 640px) {
+      .hero h1 { font-size: 1.6rem; }
+    }
+  </style>
 </head>
 <body>
-  <h1>Fundraisers Landing Page</h1>
-  <p>Coming soon.</p>
+  <div class="page">
+    <!-- HERO -->
+    <header class="hero">
+      <p class="hero-small"><a href="/">← Back to ScoopPass</a></p>
+      <h1>A dessert fundraiser families actually enjoy.</h1>
+      <p>
+        ScoopPass turns dessert sales into a simple digital fundraiser—no catalogs,
+        no cash envelopes, no chaos.
+      </p>
+      <p class="hero-small">
+        Perfect for PTOs, booster clubs, youth sports, churches, and school events that need to raise money without burning out volunteers.
+      </p>
+      <div class="hero-buttons">
+        <a class="btn btn-primary" href="#plan">Plan a dessert fundraiser</a>
+        <a class="btn btn-secondary" href="#guide">Get the Dessert Fundraiser Playbook</a>
+      </div>
+    </header>
+
+    <!-- FUNDRAISER PAINS -->
+    <section id="pains">
+      <h2>Fundraisers shouldn’t feel like a full-time job.</h2>
+      <ul class="list">
+        <li>Volunteers are tired of organizing complex catalog campaigns.</li>
+        <li>Counting cash and checks takes forever and is prone to errors.</li>
+        <li>Families are confused about order forms and deadlines.</li>
+        <li>You struggle to see clear totals, payouts, and participation.</li>
+      </ul>
+      <p><strong>Upgrade to a simple digital prepay.</strong></p>
+    </section>
+
+    <!-- HOW A FUNDRAISER WORKS -->
+    <section id="plan">
+      <h2>Dessert fundraiser in four steps.</h2>
+      <ol class="list">
+        <li><strong>Define your goal.</strong> Decide how much you want to raise and what you’re funding.</li>
+        <li><strong>Choose your dessert partner.</strong> Work with your own dessert vendor or we’ll help you connect with one.</li>
+        <li><strong>Set up your ScoopPass fundraiser page.</strong> Pick items, prices, dates, and pickup details.</li>
+        <li><strong>Share the link.</strong> Families order online; you watch the totals grow in real time.</li>
+      </ol>
+    </section>
+
+    <!-- BENEFITS FOR SCHOOLS & NONPROFITS -->
+    <section id="benefits">
+      <h2>Less volunteer work, more clear results.</h2>
+      <ul class="list">
+        <li><strong>Online ordering only.</strong> No paper forms or cash counting.</li>
+        <li><strong>Real-time tracking.</strong> See orders, revenue, and payouts at a glance.</li>
+        <li><strong>Flexible pickup.</strong> Serve dessert at a game, event night, or drive-through.</li>
+        <li><strong>Transparent profits.</strong> Know exactly how much your group earned.</li>
+      </ul>
+      <p><a href="#examples">Request a sample fundraiser report.</a></p>
+    </section>
+
+    <!-- FUNDRAISER FORMATS -->
+    <section id="formats">
+      <h2>Dessert fundraiser ideas you can run with ScoopPass.</h2>
+      <div class="cols">
+        <div class="card">
+          <h3>Event-night dessert bar</h3>
+          <p>Prepaid sundaes, shaved ice, or specialty desserts at your school event or spirit night.</p>
+        </div>
+        <div class="card">
+          <h3>Season-kickoff fundraiser</h3>
+          <p>Families pre-order treats for an opening game, concert, or assembly to support your group.</p>
+        </div>
+        <div class="card">
+          <h3>Holiday dessert pickup</h3>
+          <p>Pre-sell cinnamon rolls, cookies, and dessert trays for holidays with scheduled pickup.</p>
+        </div>
+        <div class="card">
+          <h3>Spirit-night treats</h3>
+          <p>Partner with your dessert vendor to give a percentage of each order back to your organization.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLAYBOOK / LEAD MAGNET -->
+    <section id="guide">
+      <h2>Get the Dessert Fundraiser Playbook.</h2>
+      <p>
+        We’ve collected simple dessert fundraiser formats, timelines, and promotion templates
+        into one guide you can share with your PTO, booster club, or committee.
+      </p>
+      <p>
+        Use this section for an email capture form, download link, or both.
+      </p>
+      <div class="hero-buttons" style="margin-top:12px;">
+        <a class="btn btn-primary" href="#contact">Send me the playbook</a>
+      </div>
+    </section>
+
+    <!-- START YOUR FIRST FUNDRAISER -->
+    <section id="start">
+      <h2>Start your first ScoopPass fundraiser.</h2>
+      <p>
+        Give us your event date and group type—we’ll help you design a dessert fundraiser
+        and set everything up in ScoopPass.
+      </p>
+      <div class="hero-buttons" style="margin-top:12px;">
+        <a class="btn btn-primary" href="#contact">Schedule a planning call</a>
+        <a class="btn btn-secondary" href="#contact">Request a sample fundraiser page</a>
+      </div>
+    </section>
+
+    <!-- CONTACT PLACEHOLDER -->
+    <section id="contact">
+      <h2>Talk with ScoopPass about your fundraiser.</h2>
+      <p>Use this section for a simple form or booking link specifically for schools and nonprofits.</p>
+      <p>Email placeholder: <a href="mailto:fundraisers@getscooppass.com">fundraisers@getscooppass.com</a></p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>
+        ScoopPass is a prepay platform built from real dessert and shave ice events.
+        We help PTOs, booster clubs, youth sports, and churches raise money with dessert,
+        not paperwork.
+      </p>
+      <p>
+        <a href="/">Home</a> ·
+        <a href="/vendors">Vendors</a> ·
+        <a href="/organizers">Events</a>
+      </p>
+    </footer>
+  </div>
 </body>
 </html>
