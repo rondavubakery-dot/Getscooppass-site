@@ -2,10 +2,233 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>ScoopPass - Vendors</title>
+  <title>ScoopPass for Vendors – Prepaid Dessert Lines</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+        content="ScoopPass helps dessert trucks, shave ice stands, and pop-up bakeries pre-sell servings, prep smarter, and move lines faster.">
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    a { color: #2563eb; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .page {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 24px 16px 48px;
+    }
+    .hero {
+      padding: 36px 0 28px;
+      text-align: left;
+    }
+    .hero h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 1.02rem;
+      margin-bottom: 16px;
+    }
+    .hero-small {
+      font-size: 0.92rem;
+      color: #52606d;
+      margin-bottom: 18px;
+    }
+    .hero-buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-block;
+      padding: 9px 16px;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1px solid transparent;
+    }
+    .btn-primary {
+      background: #2563eb;
+      color: #fff;
+      border-color: #2563eb;
+    }
+    .btn-secondary {
+      background: #fff;
+      color: #2563eb;
+      border-color: #cbd2d9;
+    }
+
+    section {
+      margin: 28px 0;
+      background: #fff;
+      border-radius: 12px;
+      padding: 18px 20px 22px;
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.04);
+    }
+    section h2 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 1.35rem;
+    }
+    section p {
+      margin: 6px 0;
+      font-size: 0.97rem;
+    }
+
+    .list {
+      margin: 8px 0;
+      padding-left: 20px;
+      font-size: 0.96rem;
+    }
+    .list li {
+      margin-bottom: 4px;
+    }
+    .cols {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      margin-top: 10px;
+    }
+    .card {
+      border-radius: 10px;
+      border: 1px solid #e4e7eb;
+      padding: 12px 14px 14px;
+      background: #f9fafb;
+    }
+    .card h3 {
+      margin: 0 0 6px;
+      font-size: 1.02rem;
+    }
+    .card p {
+      margin: 4px 0;
+      font-size: 0.94rem;
+    }
+
+    .footer {
+      margin-top: 32px;
+      font-size: 0.8rem;
+      color: #7b8794;
+      text-align: center;
+    }
+    .footer a {
+      color: #7b8794;
+      margin: 0 6px;
+    }
+    @media (max-width: 640px) {
+      .hero h1 { font-size: 1.6rem; }
+    }
+  </style>
 </head>
 <body>
-  <h1>Vendors Landing Page</h1>
-  <p>Coming soon.</p>
+  <div class="page">
+    <!-- HERO -->
+    <header class="hero">
+      <p class="hero-small"><a href="/">← Back to ScoopPass</a></p>
+      <h1>Turn your dessert line into a fast lane.</h1>
+      <p>
+        ScoopPass helps dessert trucks, shave ice stands, and pop-up bakeries pre-sell servings
+        so you can prep smarter and serve faster.
+      </p>
+      <p class="hero-small">
+        Know your numbers before you arrive. No more wild guesses on prep or inventory.
+      </p>
+      <div class="hero-buttons">
+        <a class="btn btn-primary" href="#pilot">Run ScoopPass on your next event</a>
+        <a class="btn btn-secondary" href="#contact">Talk about your busiest event</a>
+      </div>
+    </header>
+
+    <!-- VENDOR PAINS -->
+    <section id="pains">
+      <h2>Sound familiar?</h2>
+      <ul class="list">
+        <li>You don’t know how much to prep, so you over- or under-produce.</li>
+        <li>You get slammed with a rush and watch people walk away from long lines.</li>
+        <li>You juggle cash, cards, and messy order lists while trying to serve.</li>
+        <li>Event organizers want better reporting, but you’re stuck with receipts.</li>
+      </ul>
+      <p><strong>Prepay can fix this.</strong></p>
+    </section>
+
+    <!-- VENDOR BENEFITS -->
+    <section id="benefits">
+      <h2>What prepay does for dessert vendors.</h2>
+      <ul class="list">
+        <li><strong>Predictable prep.</strong> See orders and quantities before the event so you bring exactly what you need.</li>
+        <li><strong>Faster lines.</strong> Guests pick up prepaid treats with a quick scan or name check.</li>
+        <li><strong>More add-ons.</strong> Use prepay to upsell combos or specialty items you can plan for.</li>
+        <li><strong>Happier organizers.</strong> Give clear reports on orders, revenue, and payouts.</li>
+      </ul>
+      <p><a href="#report">See a sample vendor report (coming soon).</a></p>
+    </section>
+
+    <!-- HOW VENDORS USE SCOOPPASS -->
+    <section id="how">
+      <h2>Your next event in three clicks.</h2>
+      <ol class="list">
+        <li><strong>Create an event.</strong> Add date, location, and pickup window.</li>
+        <li><strong>Add your menu.</strong> Shave ice sizes and flavors, desserts, combos.</li>
+        <li><strong>Share the link.</strong> Event hosts post your ScoopPass link to families and attendees.</li>
+        <li><strong>Serve prepaid orders.</strong> Pull orders as guests arrive, scan QR codes or check names.</li>
+      </ol>
+    </section>
+
+    <!-- IDEAL USE CASES -->
+    <section id="use-cases">
+      <h2>Where ScoopPass shines for vendors.</h2>
+      <div class="cols">
+        <div class="card">
+          <h3>School events & carnivals</h3>
+          <p>Pre-sell shaved ice, sundaes, and special desserts so families know what they’re getting and you know what to bring.</p>
+        </div>
+        <div class="card">
+          <h3>Youth sports tournaments</h3>
+          <p>Offer prepaid “tournament treat packs” and keep lines moving between games.</p>
+        </div>
+        <div class="card">
+          <h3>Community festivals & markets</h3>
+          <p>Use prepay to guarantee a baseline of sales and highlight limited-run items.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PILOT OFFER -->
+    <section id="pilot">
+      <h2>Start with one pilot event.</h2>
+      <p>
+        Try ScoopPass on your next busy event and see how it feels to serve a line that already ordered.
+        We’ll help you set up the offer, coordinate with the host, and review results afterward.
+      </p>
+      <div class="hero-buttons" style="margin-top:12px;">
+        <a class="btn btn-primary" href="#contact">Book a vendor pilot call</a>
+        <a class="btn btn-secondary" href="#contact">Request vendor pricing</a>
+      </div>
+    </section>
+
+    <!-- CONTACT PLACEHOLDER -->
+    <section id="contact">
+      <h2>Talk with ScoopPass about your events.</h2>
+      <p>Use this section for a simple form or booking link specifically for vendors.</p>
+      <p>Email placeholder: <a href="mailto:vendors@getscooppass.com">vendors@getscooppass.com</a></p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>
+        ScoopPass is a prepay platform built from real dessert and shave ice events.
+        We help vendors prep smarter, move lines faster, and keep organizers smiling.
+      </p>
+      <p>
+        <a href="/">Home</a> ·
+        <a href="/fundraisers">Fundraisers</a> ·
+        <a href="/organizers">Events</a>
+      </p>
+    </footer>
+  </div>
 </body>
 </html>
