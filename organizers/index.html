@@ -7,143 +7,220 @@
   <meta name="description"
         content="ScoopPass lets event organizers add prepaid dessert options so lines move faster, vendors show up prepared, and reporting is clear.">
   <style>
+    :root {
+      --ink: #1a2332;
+      --muted: #5b6b7c;
+      --bg: #f7f3ee;
+      --card: #ffffff;
+      --line: #e8e0d6;
+      --brand: #0d9488;
+      --brand-dark: #0f766e;
+      --soft: #ecfdf8;
+    }
+    * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: #1f2933;
-      background: #f5f7fa;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.55;
     }
-    a { color: #2563eb; text-decoration: none; }
+    a { color: var(--brand-dark); text-decoration: none; }
     a:hover { text-decoration: underline; }
+
+    .nav {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 16px 16px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .logo {
+      font-weight: 800;
+      font-size: 1.15rem;
+      color: var(--ink);
+      letter-spacing: -0.02em;
+    }
+    .logo span { color: var(--brand); }
+    .nav-links {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+    .nav-links a { color: var(--muted); }
+    .nav-links a:hover { color: var(--brand-dark); }
 
     .page {
       max-width: 960px;
       margin: 0 auto;
-      padding: 24px 16px 48px;
+      padding: 8px 16px 48px;
     }
-    .hero {
-      padding: 36px 0 28px;
-      text-align: left;
+    .hero { padding: 32px 0 20px; }
+    .eyebrow {
+      display: inline-block;
+      background: var(--soft);
+      color: var(--brand-dark);
+      border: 1px solid #99f6e4;
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 14px;
     }
     .hero h1 {
-      font-size: 2rem;
-      margin-bottom: 10px;
+      font-size: clamp(1.7rem, 3.5vw, 2.2rem);
+      margin: 0 0 12px;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
     }
-    .hero p {
-      font-size: 1.02rem;
-      margin-bottom: 16px;
-    }
-    .hero-small {
-      font-size: 0.92rem;
-      color: #52606d;
-      margin-bottom: 18px;
-    }
-    .hero-buttons {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
+    .hero .lead { font-size: 1.05rem; margin: 0 0 10px; max-width: 680px; }
+    .hero .sub { font-size: 0.96rem; color: var(--muted); margin: 0 0 20px; max-width: 640px; }
+    .hero-buttons { display: flex; gap: 12px; flex-wrap: wrap; }
     .btn {
       display: inline-block;
-      padding: 9px 16px;
+      padding: 12px 20px;
       border-radius: 999px;
       font-size: 0.95rem;
-      font-weight: 600;
-      cursor: pointer;
+      font-weight: 700;
       border: 1px solid transparent;
+      text-decoration: none !important;
     }
     .btn-primary {
-      background: #2563eb;
-      color: #fff;
-      border-color: #2563eb;
+      background: var(--brand);
+      color: #fff !important;
+      border-color: var(--brand);
     }
+    .btn-primary:hover { background: var(--brand-dark); }
     .btn-secondary {
       background: #fff;
-      color: #2563eb;
-      border-color: #cbd2d9;
+      color: var(--brand-dark) !important;
+      border-color: var(--line);
     }
 
     section {
-      margin: 28px 0;
-      background: #fff;
-      border-radius: 12px;
-      padding: 18px 20px 22px;
-      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.04);
+      margin: 20px 0;
+      background: var(--card);
+      border-radius: 16px;
+      padding: 22px 20px 24px;
+      border: 1px solid var(--line);
+      box-shadow: 0 10px 28px rgba(26, 35, 50, 0.04);
     }
     section h2 {
-      margin-top: 0;
-      margin-bottom: 10px;
+      margin: 0 0 10px;
       font-size: 1.35rem;
+      letter-spacing: -0.02em;
     }
-    section p {
-      margin: 6px 0;
-      font-size: 0.97rem;
+    section p { margin: 6px 0; font-size: 0.97rem; }
+
+    .list { margin: 8px 0 0; padding-left: 20px; font-size: 0.96rem; }
+    .list li { margin-bottom: 8px; }
+
+    .steps {
+      counter-reset: step;
+      list-style: none;
+      padding: 0;
+      margin: 12px 0 0;
+    }
+    .steps li {
+      position: relative;
+      padding: 12px 12px 12px 52px;
+      margin-bottom: 10px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #fbfaf8;
+    }
+    .steps li::before {
+      counter-increment: step;
+      content: counter(step);
+      position: absolute;
+      left: 12px;
+      top: 12px;
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      background: var(--brand);
+      color: #fff;
+      font-weight: 800;
+      font-size: 0.85rem;
+      display: grid;
+      place-items: center;
     }
 
-    .list {
-      margin: 8px 0;
-      padding-left: 20px;
-      font-size: 0.96rem;
-    }
-    .list li {
-      margin-bottom: 4px;
-    }
     .cols {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 16px;
-      margin-top: 10px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 14px;
+      margin-top: 12px;
     }
     .card {
-      border-radius: 10px;
-      border: 1px solid #e4e7eb;
-      padding: 12px 14px 14px;
-      background: #f9fafb;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      padding: 14px 16px 16px;
+      background: #fbfaf8;
     }
-    .card h3 {
-      margin: 0 0 6px;
-      font-size: 1.02rem;
+    .card h3 { margin: 0 0 6px; font-size: 1.02rem; }
+    .card p { margin: 0; font-size: 0.94rem; color: var(--muted); }
+
+    .cta-box {
+      background: linear-gradient(135deg, #0f766e 0%, #0d9488 55%, #14b8a6 100%);
+      color: #fff;
+      border: none;
     }
-    .card p {
-      margin: 4px 0;
-      font-size: 0.94rem;
+    .cta-box h2, .cta-box p { color: #fff; }
+    .cta-box .btn-primary {
+      background: #fff;
+      color: var(--brand-dark) !important;
+      border-color: #fff;
+    }
+    .cta-box .btn-secondary {
+      background: transparent;
+      color: #fff !important;
+      border-color: rgba(255,255,255,0.55);
     }
 
     .footer {
-      margin-top: 32px;
-      font-size: 0.8rem;
-      color: #7b8794;
+      margin-top: 28px;
+      font-size: 0.85rem;
+      color: var(--muted);
       text-align: center;
+      padding: 8px 8px 24px;
     }
-    .footer a {
-      color: #7b8794;
-      margin: 0 6px;
-    }
-    @media (max-width: 640px) {
-      .hero h1 { font-size: 1.6rem; }
-    }
+    .footer a { color: var(--muted); margin: 0 6px; font-weight: 600; }
   </style>
 </head>
 <body>
+  <nav class="nav">
+    <a class="logo" href="../">Scoop<span>Pass</span></a>
+    <div class="nav-links">
+      <a href="../">Home</a>
+      <a href="../vendors/">Vendors</a>
+      <a href="../fundraisers/">Fundraisers</a>
+      <a href="./">Events</a>
+    </div>
+  </nav>
+
   <div class="page">
-    <!-- HERO -->
     <header class="hero">
-      <p class="hero-small"><a href="/">← Back to ScoopPass</a></p>
+      <div class="eyebrow">For event organizers</div>
       <h1>Make your vendors and guests love you.</h1>
-      <p>
+      <p class="lead">
         ScoopPass lets you offer prepaid dessert options at your events so lines move faster
         and vendors show up prepared.
       </p>
-      <p class="hero-small">
+      <p class="sub">
         Ideal for community festivals, school events, sports tournaments, and vendor markets.
       </p>
       <div class="hero-buttons">
-        <a class="btn btn-primary" href="#fit">Add ScoopPass to your next event</a>
-        <a class="btn btn-secondary" href="#checklist">Get the organizer checklist</a>
+        <a class="btn btn-primary" href="mailto:hello@getscooppass.com?subject=Add%20ScoopPass%20to%20my%20event">Add ScoopPass to your next event</a>
+        <a class="btn btn-secondary" href="mailto:hello@getscooppass.com?subject=Organizer%20checklist">Get the organizer checklist</a>
       </div>
     </header>
 
-    <!-- ORGANIZER PAINS -->
     <section id="pains">
       <h2>You have enough to manage already.</h2>
       <ul class="list">
@@ -155,7 +232,6 @@
       <p><strong>Offer one simple prepay system.</strong></p>
     </section>
 
-    <!-- BENEFITS TO ORGANIZERS -->
     <section id="benefits">
       <h2>Happier guests, better vendor performance.</h2>
       <ul class="list">
@@ -166,10 +242,9 @@
       </ul>
     </section>
 
-    <!-- HOW SCOOPPASS FITS YOUR EVENT -->
     <section id="fit">
       <h2>Add prepay without adding workload.</h2>
-      <ol class="list">
+      <ol class="steps">
         <li><strong>Share your event details.</strong> Date, location, expected attendance, and dessert plan.</li>
         <li><strong>Connect vendors or fundraiser groups.</strong> We help them set up ScoopPass offers.</li>
         <li><strong>Promote the prepay link.</strong> Add it to your event page, emails, and flyers.</li>
@@ -177,7 +252,6 @@
       </ol>
     </section>
 
-    <!-- EVENT TYPES -->
     <section id="events">
       <h2>Events that benefit most from ScoopPass.</h2>
       <div class="cols">
@@ -200,49 +274,44 @@
       </div>
     </section>
 
-    <!-- ORGANIZER CHECKLIST / LEAD MAGNET -->
     <section id="checklist">
       <h2>Get the Prepay Event Organizer Checklist.</h2>
       <p>
         We’ve built a simple checklist that shows exactly where to plug ScoopPass
         into your event communication, signage, and vendor coordination.
       </p>
-      <p>Use this section for email capture and a download link to the checklist.</p>
       <div class="hero-buttons" style="margin-top:12px;">
-        <a class="btn btn-primary" href="#contact">Send me the organizer checklist</a>
+        <a class="btn btn-primary" href="mailto:hello@getscooppass.com?subject=Send%20me%20the%20organizer%20checklist">Send me the organizer checklist</a>
       </div>
     </section>
 
-    <!-- START WITH ONE EVENT -->
-    <section id="start">
+    <section class="cta-box" id="start">
       <h2>Add ScoopPass to one event and see the difference.</h2>
       <p>
         Pick your next event and we’ll help you pilot ScoopPass with one or more dessert vendors.
         You’ll see how prepay changes lines, inventory, and reporting—without adding work to your plate.
       </p>
-      <div class="hero-buttons" style="margin-top:12px;">
-        <a class="btn btn-primary" href="#contact">Talk to us about a specific event</a>
-        <a class="btn btn-secondary" href="#contact">Request an organizer overview</a>
+      <div class="hero-buttons" style="margin-top:14px;">
+        <a class="btn btn-primary" href="mailto:hello@getscooppass.com?subject=Talk%20about%20my%20event">Talk about a specific event</a>
+        <a class="btn btn-secondary" href="mailto:hello@getscooppass.com?subject=Organizer%20overview">Request an organizer overview</a>
       </div>
     </section>
 
-    <!-- CONTACT PLACEHOLDER -->
     <section id="contact">
       <h2>Talk with ScoopPass about your event.</h2>
-      <p>Use this section for a simple form or booking link specifically for event organizers.</p>
-      <p>Email placeholder: <a href="mailto:events@getscooppass.com">events@getscooppass.com</a></p>
+      <p>Share your date, expected attendance, and dessert plan—we’ll handle the rest.</p>
+      <p>Email: <a href="mailto:hello@getscooppass.com"><strong>hello@getscooppass.com</strong></a></p>
     </section>
 
-    <!-- FOOTER -->
     <footer class="footer">
       <p>
         ScoopPass is a prepay platform built from real dessert and shave ice events.
         We help organizers design smoother lines, happier vendors, and clearer fundraiser results.
       </p>
       <p>
-        <a href="/">Home</a> ·
-        <a href="/vendors">Vendors</a> ·
-        <a href="/fundraisers">Fundraisers</a>
+        <a href="../">Home</a> ·
+        <a href="../vendors/">Vendors</a> ·
+        <a href="../fundraisers/">Fundraisers</a>
       </p>
     </footer>
   </div>

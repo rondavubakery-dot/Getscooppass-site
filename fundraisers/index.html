@@ -7,143 +7,220 @@
   <meta name="description"
         content="ScoopPass turns dessert sales into a simple digital fundraiser for PTOs, booster clubs, youth sports, and churches. No catalogs, no cash envelopes.">
   <style>
+    :root {
+      --ink: #1a2332;
+      --muted: #5b6b7c;
+      --bg: #f7f3ee;
+      --card: #ffffff;
+      --line: #e8e0d6;
+      --brand: #0d9488;
+      --brand-dark: #0f766e;
+      --soft: #ecfdf8;
+    }
+    * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: #1f2933;
-      background: #f5f7fa;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.55;
     }
-    a { color: #2563eb; text-decoration: none; }
+    a { color: var(--brand-dark); text-decoration: none; }
     a:hover { text-decoration: underline; }
+
+    .nav {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 16px 16px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .logo {
+      font-weight: 800;
+      font-size: 1.15rem;
+      color: var(--ink);
+      letter-spacing: -0.02em;
+    }
+    .logo span { color: var(--brand); }
+    .nav-links {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+    .nav-links a { color: var(--muted); }
+    .nav-links a:hover { color: var(--brand-dark); }
 
     .page {
       max-width: 960px;
       margin: 0 auto;
-      padding: 24px 16px 48px;
+      padding: 8px 16px 48px;
     }
-    .hero {
-      padding: 36px 0 28px;
-      text-align: left;
+    .hero { padding: 32px 0 20px; }
+    .eyebrow {
+      display: inline-block;
+      background: var(--soft);
+      color: var(--brand-dark);
+      border: 1px solid #99f6e4;
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 14px;
     }
     .hero h1 {
-      font-size: 2rem;
-      margin-bottom: 10px;
+      font-size: clamp(1.7rem, 3.5vw, 2.2rem);
+      margin: 0 0 12px;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
     }
-    .hero p {
-      font-size: 1.02rem;
-      margin-bottom: 16px;
-    }
-    .hero-small {
-      font-size: 0.92rem;
-      color: #52606d;
-      margin-bottom: 18px;
-    }
-    .hero-buttons {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
+    .hero .lead { font-size: 1.05rem; margin: 0 0 10px; max-width: 680px; }
+    .hero .sub { font-size: 0.96rem; color: var(--muted); margin: 0 0 20px; max-width: 640px; }
+    .hero-buttons { display: flex; gap: 12px; flex-wrap: wrap; }
     .btn {
       display: inline-block;
-      padding: 9px 16px;
+      padding: 12px 20px;
       border-radius: 999px;
       font-size: 0.95rem;
-      font-weight: 600;
-      cursor: pointer;
+      font-weight: 700;
       border: 1px solid transparent;
+      text-decoration: none !important;
     }
     .btn-primary {
-      background: #2563eb;
-      color: #fff;
-      border-color: #2563eb;
+      background: var(--brand);
+      color: #fff !important;
+      border-color: var(--brand);
     }
+    .btn-primary:hover { background: var(--brand-dark); }
     .btn-secondary {
       background: #fff;
-      color: #2563eb;
-      border-color: #cbd2d9;
+      color: var(--brand-dark) !important;
+      border-color: var(--line);
     }
 
     section {
-      margin: 28px 0;
-      background: #fff;
-      border-radius: 12px;
-      padding: 18px 20px 22px;
-      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.04);
+      margin: 20px 0;
+      background: var(--card);
+      border-radius: 16px;
+      padding: 22px 20px 24px;
+      border: 1px solid var(--line);
+      box-shadow: 0 10px 28px rgba(26, 35, 50, 0.04);
     }
     section h2 {
-      margin-top: 0;
-      margin-bottom: 10px;
+      margin: 0 0 10px;
       font-size: 1.35rem;
+      letter-spacing: -0.02em;
     }
-    section p {
-      margin: 6px 0;
-      font-size: 0.97rem;
+    section p { margin: 6px 0; font-size: 0.97rem; }
+
+    .list { margin: 8px 0 0; padding-left: 20px; font-size: 0.96rem; }
+    .list li { margin-bottom: 8px; }
+
+    .steps {
+      counter-reset: step;
+      list-style: none;
+      padding: 0;
+      margin: 12px 0 0;
+    }
+    .steps li {
+      position: relative;
+      padding: 12px 12px 12px 52px;
+      margin-bottom: 10px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #fbfaf8;
+    }
+    .steps li::before {
+      counter-increment: step;
+      content: counter(step);
+      position: absolute;
+      left: 12px;
+      top: 12px;
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      background: var(--brand);
+      color: #fff;
+      font-weight: 800;
+      font-size: 0.85rem;
+      display: grid;
+      place-items: center;
     }
 
-    .list {
-      margin: 8px 0;
-      padding-left: 20px;
-      font-size: 0.96rem;
-    }
-    .list li {
-      margin-bottom: 4px;
-    }
     .cols {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 16px;
-      margin-top: 10px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 14px;
+      margin-top: 12px;
     }
     .card {
-      border-radius: 10px;
-      border: 1px solid #e4e7eb;
-      padding: 12px 14px 14px;
-      background: #f9fafb;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      padding: 14px 16px 16px;
+      background: #fbfaf8;
     }
-    .card h3 {
-      margin: 0 0 6px;
-      font-size: 1.02rem;
+    .card h3 { margin: 0 0 6px; font-size: 1.02rem; }
+    .card p { margin: 0; font-size: 0.94rem; color: var(--muted); }
+
+    .cta-box {
+      background: linear-gradient(135deg, #0f766e 0%, #0d9488 55%, #14b8a6 100%);
+      color: #fff;
+      border: none;
     }
-    .card p {
-      margin: 4px 0;
-      font-size: 0.94rem;
+    .cta-box h2, .cta-box p { color: #fff; }
+    .cta-box .btn-primary {
+      background: #fff;
+      color: var(--brand-dark) !important;
+      border-color: #fff;
+    }
+    .cta-box .btn-secondary {
+      background: transparent;
+      color: #fff !important;
+      border-color: rgba(255,255,255,0.55);
     }
 
     .footer {
-      margin-top: 32px;
-      font-size: 0.8rem;
-      color: #7b8794;
+      margin-top: 28px;
+      font-size: 0.85rem;
+      color: var(--muted);
       text-align: center;
+      padding: 8px 8px 24px;
     }
-    .footer a {
-      color: #7b8794;
-      margin: 0 6px;
-    }
-    @media (max-width: 640px) {
-      .hero h1 { font-size: 1.6rem; }
-    }
+    .footer a { color: var(--muted); margin: 0 6px; font-weight: 600; }
   </style>
 </head>
 <body>
+  <nav class="nav">
+    <a class="logo" href="../">Scoop<span>Pass</span></a>
+    <div class="nav-links">
+      <a href="../">Home</a>
+      <a href="../vendors/">Vendors</a>
+      <a href="./">Fundraisers</a>
+      <a href="../organizers/">Events</a>
+    </div>
+  </nav>
+
   <div class="page">
-    <!-- HERO -->
     <header class="hero">
-      <p class="hero-small"><a href="/">← Back to ScoopPass</a></p>
+      <div class="eyebrow">For schools & nonprofits</div>
       <h1>A dessert fundraiser families actually enjoy.</h1>
-      <p>
+      <p class="lead">
         ScoopPass turns dessert sales into a simple digital fundraiser—no catalogs,
         no cash envelopes, no chaos.
       </p>
-      <p class="hero-small">
+      <p class="sub">
         Perfect for PTOs, booster clubs, youth sports, churches, and school events that need to raise money without burning out volunteers.
       </p>
       <div class="hero-buttons">
-        <a class="btn btn-primary" href="#plan">Plan a dessert fundraiser</a>
-        <a class="btn btn-secondary" href="#guide">Get the Dessert Fundraiser Playbook</a>
+        <a class="btn btn-primary" href="mailto:hello@getscooppass.com?subject=Plan%20a%20dessert%20fundraiser">Plan a dessert fundraiser</a>
+        <a class="btn btn-secondary" href="mailto:hello@getscooppass.com?subject=Dessert%20Fundraiser%20Playbook">Get the Fundraiser Playbook</a>
       </div>
     </header>
 
-    <!-- FUNDRAISER PAINS -->
     <section id="pains">
       <h2>Fundraisers shouldn’t feel like a full-time job.</h2>
       <ul class="list">
@@ -155,10 +232,9 @@
       <p><strong>Upgrade to a simple digital prepay.</strong></p>
     </section>
 
-    <!-- HOW A FUNDRAISER WORKS -->
     <section id="plan">
       <h2>Dessert fundraiser in four steps.</h2>
-      <ol class="list">
+      <ol class="steps">
         <li><strong>Define your goal.</strong> Decide how much you want to raise and what you’re funding.</li>
         <li><strong>Choose your dessert partner.</strong> Work with your own dessert vendor or we’ll help you connect with one.</li>
         <li><strong>Set up your ScoopPass fundraiser page.</strong> Pick items, prices, dates, and pickup details.</li>
@@ -166,7 +242,6 @@
       </ol>
     </section>
 
-    <!-- BENEFITS FOR SCHOOLS & NONPROFITS -->
     <section id="benefits">
       <h2>Less volunteer work, more clear results.</h2>
       <ul class="list">
@@ -175,10 +250,8 @@
         <li><strong>Flexible pickup.</strong> Serve dessert at a game, event night, or drive-through.</li>
         <li><strong>Transparent profits.</strong> Know exactly how much your group earned.</li>
       </ul>
-      <p><a href="#examples">Request a sample fundraiser report.</a></p>
     </section>
 
-    <!-- FUNDRAISER FORMATS -->
     <section id="formats">
       <h2>Dessert fundraiser ideas you can run with ScoopPass.</h2>
       <div class="cols">
@@ -201,42 +274,35 @@
       </div>
     </section>
 
-    <!-- PLAYBOOK / LEAD MAGNET -->
     <section id="guide">
       <h2>Get the Dessert Fundraiser Playbook.</h2>
       <p>
         We’ve collected simple dessert fundraiser formats, timelines, and promotion templates
         into one guide you can share with your PTO, booster club, or committee.
       </p>
-      <p>
-        Use this section for an email capture form, download link, or both.
-      </p>
       <div class="hero-buttons" style="margin-top:12px;">
-        <a class="btn btn-primary" href="#contact">Send me the playbook</a>
+        <a class="btn btn-primary" href="mailto:hello@getscooppass.com?subject=Send%20me%20the%20Dessert%20Fundraiser%20Playbook">Send me the playbook</a>
       </div>
     </section>
 
-    <!-- START YOUR FIRST FUNDRAISER -->
-    <section id="start">
+    <section class="cta-box" id="start">
       <h2>Start your first ScoopPass fundraiser.</h2>
       <p>
         Give us your event date and group type—we’ll help you design a dessert fundraiser
         and set everything up in ScoopPass.
       </p>
-      <div class="hero-buttons" style="margin-top:12px;">
-        <a class="btn btn-primary" href="#contact">Schedule a planning call</a>
-        <a class="btn btn-secondary" href="#contact">Request a sample fundraiser page</a>
+      <div class="hero-buttons" style="margin-top:14px;">
+        <a class="btn btn-primary" href="mailto:hello@getscooppass.com?subject=Fundraiser%20planning%20call">Schedule a planning call</a>
+        <a class="btn btn-secondary" href="mailto:hello@getscooppass.com?subject=Sample%20fundraiser%20page">Request a sample fundraiser page</a>
       </div>
     </section>
 
-    <!-- CONTACT PLACEHOLDER -->
     <section id="contact">
       <h2>Talk with ScoopPass about your fundraiser.</h2>
-      <p>Use this section for a simple form or booking link specifically for schools and nonprofits.</p>
-      <p>Email placeholder: <a href="mailto:fundraisers@getscooppass.com">fundraisers@getscooppass.com</a></p>
+      <p>Perfect for PTOs, booster clubs, youth sports, churches, and school committees.</p>
+      <p>Email: <a href="mailto:hello@getscooppass.com"><strong>hello@getscooppass.com</strong></a></p>
     </section>
 
-    <!-- FOOTER -->
     <footer class="footer">
       <p>
         ScoopPass is a prepay platform built from real dessert and shave ice events.
@@ -244,9 +310,9 @@
         not paperwork.
       </p>
       <p>
-        <a href="/">Home</a> ·
-        <a href="/vendors">Vendors</a> ·
-        <a href="/organizers">Events</a>
+        <a href="../">Home</a> ·
+        <a href="../vendors/">Vendors</a> ·
+        <a href="../organizers/">Events</a>
       </p>
     </footer>
   </div>
