@@ -2,373 +2,137 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>ScoopPass – Prepaid Dessert & Fundraisers</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description"
-        content="ScoopPass helps dessert vendors, schools, and event organizers pre-sell treats, shorten lines, and track every dollar.">
-  <style>
-    :root {
-      --ink: #1a2332;
-      --muted: #5b6b7c;
-      --bg: #f7f3ee;
-      --card: #ffffff;
-      --line: #e8e0d6;
-      --brand: #0d9488;
-      --brand-dark: #0f766e;
-      --accent: #e11d48;
-      --soft: #ecfdf8;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: var(--ink);
-      background: var(--bg);
-      line-height: 1.55;
-    }
-    a { color: var(--brand-dark); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-    .nav {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 16px 16px 0;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-    .logo {
-      font-weight: 800;
-      font-size: 1.15rem;
-      color: var(--ink);
-      letter-spacing: -0.02em;
-    }
-    .logo span { color: var(--brand); }
-    .nav-links {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-      font-size: 0.92rem;
-      font-weight: 600;
-    }
-    .nav-links a { color: var(--muted); }
-    .nav-links a:hover { color: var(--brand-dark); }
-    .nav-cta {
-      background: var(--brand) !important;
-      color: #fff !important;
-      padding: 8px 14px;
-      border-radius: 999px;
-      text-decoration: none !important;
-    }
-    .nav-cta:hover { background: var(--brand-dark) !important; color: #fff !important; }
-
-    .page {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 8px 16px 48px;
-    }
-    .hero {
-      padding: 40px 0 28px;
-      text-align: center;
-    }
-    .eyebrow {
-      display: inline-block;
-      background: var(--soft);
-      color: var(--brand-dark);
-      border: 1px solid #99f6e4;
-      border-radius: 999px;
-      padding: 6px 12px;
-      font-size: 0.85rem;
-      font-weight: 700;
-      margin-bottom: 14px;
-    }
-    .hero h1 {
-      font-size: clamp(1.85rem, 4vw, 2.45rem);
-      margin: 0 0 14px;
-      letter-spacing: -0.03em;
-      line-height: 1.15;
-    }
-    .hero .lead {
-      font-size: 1.08rem;
-      margin: 0 auto 12px;
-      max-width: 640px;
-      color: var(--ink);
-    }
-    .hero .sub {
-      font-size: 0.98rem;
-      color: var(--muted);
-      margin: 0 auto 24px;
-      max-width: 580px;
-    }
-    .hero-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-    .btn {
-      display: inline-block;
-      padding: 12px 20px;
-      border-radius: 999px;
-      font-size: 0.95rem;
-      font-weight: 700;
-      border: 1px solid transparent;
-      text-decoration: none !important;
-    }
-    .btn-primary {
-      background: var(--brand);
-      color: #fff !important;
-      border-color: var(--brand);
-    }
-    .btn-primary:hover { background: var(--brand-dark); }
-    .btn-secondary {
-      background: #fff;
-      color: var(--brand-dark) !important;
-      border-color: var(--line);
-    }
-    .btn-secondary:hover { border-color: var(--brand); }
-
-    section {
-      margin: 22px 0;
-      background: var(--card);
-      border-radius: 16px;
-      padding: 24px 22px 26px;
-      border: 1px solid var(--line);
-      box-shadow: 0 10px 28px rgba(26, 35, 50, 0.04);
-    }
-    section h2 {
-      margin: 0 0 12px;
-      font-size: 1.4rem;
-      letter-spacing: -0.02em;
-    }
-    section p { margin: 8px 0; font-size: 0.98rem; }
-
-    .three-cols {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 14px;
-      margin-top: 14px;
-    }
-    .card {
-      border-radius: 12px;
-      border: 1px solid var(--line);
-      padding: 16px;
-      background: #fbfaf8;
-    }
-    .card h3 {
-      margin: 0 0 8px;
-      font-size: 1.05rem;
-    }
-    .card p {
-      margin: 0;
-      font-size: 0.95rem;
-      color: var(--muted);
-    }
-    .card a {
-      display: inline-block;
-      margin-top: 10px;
-      font-weight: 700;
-      font-size: 0.9rem;
-    }
-
-    .list {
-      margin: 10px 0 0;
-      padding-left: 20px;
-      font-size: 0.97rem;
-    }
-    .list li { margin-bottom: 8px; }
-
-    .steps {
-      counter-reset: step;
-      list-style: none;
-      padding: 0;
-      margin: 12px 0 0;
-    }
-    .steps li {
-      position: relative;
-      padding: 12px 12px 12px 52px;
-      margin-bottom: 10px;
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      background: #fbfaf8;
-    }
-    .steps li::before {
-      counter-increment: step;
-      content: counter(step);
-      position: absolute;
-      left: 12px;
-      top: 12px;
-      width: 28px;
-      height: 28px;
-      border-radius: 999px;
-      background: var(--brand);
-      color: #fff;
-      font-weight: 800;
-      font-size: 0.85rem;
-      display: grid;
-      place-items: center;
-    }
-
-    .cta-box {
-      background: linear-gradient(135deg, #0f766e 0%, #0d9488 55%, #14b8a6 100%);
-      color: #fff;
-      border: none;
-    }
-    .cta-box h2, .cta-box p { color: #fff; }
-    .cta-box .btn-primary {
-      background: #fff;
-      color: var(--brand-dark) !important;
-      border-color: #fff;
-    }
-    .cta-box .btn-secondary {
-      background: transparent;
-      color: #fff !important;
-      border-color: rgba(255,255,255,0.55);
-    }
-
-    .footer {
-      margin-top: 28px;
-      font-size: 0.85rem;
-      color: var(--muted);
-      text-align: center;
-      padding: 8px 8px 24px;
-    }
-    .footer a {
-      color: var(--muted);
-      margin: 0 6px;
-      font-weight: 600;
-    }
-    @media (max-width: 640px) {
-      .hero { text-align: left; }
-      .hero-buttons { justify-content: flex-start; }
-    }
-  </style>
+  <title>ScoopPass™ — Any Product Can Be a Fundraiser</title>
+  <meta name="description" content="Pre-pay fundraiser portal for vendors and schools. Founding rate $149 through 2026. $0 monthly. Know your numbers before the event.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <nav class="nav">
-    <a class="logo" href="./">Scoop<span>Pass</span></a>
-    <div class="nav-links">
+  <nav class="l-nav">
+    <a class="l-nav-logo" href="./">ScoopPass<span>™</span></a>
+    <div class="l-nav-links">
       <a href="vendors/">Vendors</a>
       <a href="fundraisers/">Fundraisers</a>
-      <a href="organizers/">Events</a>
       <a href="https://app.getscooppass.com/login">Log in</a>
-      <a class="nav-cta" href="https://app.getscooppass.com/get-started">Sign up</a>
+      <a class="btn-nav" href="https://app.getscooppass.com/get-started-founding">Get Started — $149</a>
     </div>
   </nav>
 
-  <div class="page">
-    <header class="hero">
-      <div class="eyebrow">Prepaid dessert & fundraiser platform</div>
-      <h1>Sell more dessert. Skip the cash hassle.</h1>
-      <p class="lead">
-        ScoopPass is the easiest way for vendors and fundraisers to pre-sell treats,
-        shorten lines, and track every dollar.
-      </p>
-      <p class="sub">
-        Built by a real dessert business for food trucks, shave ice, bakeries, schools, and youth fundraisers.
-      </p>
-      <div class="hero-buttons">
-        <a class="btn btn-primary" href="https://app.getscooppass.com/get-started">Sign up free</a>
-        <a class="btn btn-secondary" href="fundraisers/">See how a fundraiser works</a>
-      </div>
-    </header>
+  <header class="l-hero">
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      <span>Founding rate — $149 through 2026</span>
+    </div>
+    <h1>Any product can be<br>a <em>fundraiser.</em></h1>
+    <p class="hero-sub">
+      Pre-pay links. Teacher-sorted orders. Money before the event.
+      Built by a vendor — for vendors, schools, and the people who run the night.
+    </p>
+    <div class="hero-ctas">
+      <a class="btn-primary-l" href="https://app.getscooppass.com/get-started-founding">Become a Vendor — $149 →</a>
+      <a class="btn-secondary-l" href="fundraisers/">I’m planning a school fundraiser</a>
+    </div>
+  </header>
 
-    <section id="audiences">
-      <h2>One platform, three big wins.</h2>
-      <div class="three-cols">
-        <div class="card">
-          <h3>Dessert vendors</h3>
-          <p>Pre-sell servings so you can prep smarter and move lines faster.</p>
-          <a href="vendors/">Vendor page →</a>
-        </div>
-        <div class="card">
-          <h3>Schools & nonprofits</h3>
-          <p>Run dessert fundraisers without catalog chaos or cash counting.</p>
-          <a href="fundraisers/">Fundraiser page →</a>
-        </div>
-        <div class="card">
-          <h3>Event organizers</h3>
-          <p>Offer a better guest experience and happier vendors with prepay.</p>
-          <a href="organizers/">Events page →</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="how">
-      <h2>Prepay in three simple steps.</h2>
-      <ol class="steps">
-        <li><strong>Create your offer.</strong> Set up your event, fundraiser, or menu in minutes—name your items, quantities, prices, and dates.</li>
-        <li><strong>Share your ScoopPass link.</strong> Post your link and QR code on Facebook, email, flyers, and texts. Families and guests buy ahead from any device.</li>
-        <li><strong>Serve with speed and confidence.</strong> On event day, scan QR codes or check names off the list. You know exactly what to bring and who ordered.</li>
-      </ol>
-    </section>
-
-    <section id="benefits">
-      <h2>Stop guessing. Start planning with real orders.</h2>
-      <ul class="list">
-        <li><strong>No more cash chaos.</strong> Parents and guests pay online before the event.</li>
-        <li><strong>Shorter lines, more smiles.</strong> Prepaid orders keep lines flowing and impulse buyers happy.</li>
-        <li><strong>Less waste, more profit.</strong> Prep based on actual orders, not best guesses.</li>
-        <li><strong>Cleaner bookkeeping.</strong> See totals, payouts, and reports in one place.</li>
-      </ul>
-    </section>
-
-    <section id="about">
-      <h2>Built from a dessert trailer, not a boardroom.</h2>
-      <p>
-        ScoopPass is built by the owner of a mobile dessert and shave ice business.
-        After years of long lines, cash envelopes, and messy fundraisers, we designed a prepay
-        system that actually works in the real world.
-      </p>
-      <ul class="list">
-        <li>Designed around food trucks, shave ice, and pop-up dessert vendors.</li>
-        <li>Proven with school events, youth sports, and community fundraisers.</li>
-        <li>Focused on simple, practical workflows your volunteers and staff can actually follow.</li>
-      </ul>
-    </section>
-
-    <section class="cta-box" id="demo">
-      <h2>Try ScoopPass on your next event or fundraiser.</h2>
-      <p>
-        We’ll help you set up your first prepay offer, promote it, and review the results with you.
-        No long contracts—just a clear test that shows you how much smoother dessert can be.
-      </p>
-      <div class="hero-buttons" style="justify-content:flex-start; margin-top:16px;">
-        <a class="btn btn-primary" href="https://app.getscooppass.com/get-started">Create your free account</a>
-        <a class="btn btn-secondary" href="https://app.getscooppass.com/login">Already have an account? Log in</a>
-      </div>
-    </section>
-
-    <section id="contact">
-      <h2>Ready to start — or want to talk first?</h2>
-      <p>Most people sign up and set up their first event in a few minutes. Prefer a walkthrough? Email us.</p>
-      <div class="hero-buttons" style="justify-content:flex-start; margin-top:14px;">
-        <a class="btn btn-primary" href="https://app.getscooppass.com/get-started">Sign up free</a>
-        <a class="btn btn-secondary" href="https://app.getscooppass.com/login">Log in</a>
-        <a class="btn btn-secondary" href="mailto:rondavubakery@gmail.com?subject=ScoopPass%20question">Email us</a>
-      </div>
-      <p style="margin-top:14px;">
-        Email:
-        <a href="mailto:rondavubakery@gmail.com"><strong>rondavubakery@gmail.com</strong></a>
-      </p>
-    </section>
-
-    <footer class="footer">
-      <p>
-        ScoopPass is a prepay platform built from real dessert and shave ice events.
-        We help vendors, schools, and organizers serve more people, raise more money,
-        and simplify dessert—one event at a time.
-      </p>
-      <p>
-        <a href="#about">About</a> ·
-        <a href="vendors/">Vendors</a> ·
-        <a href="fundraisers/">Fundraisers</a> ·
-        <a href="organizers/">Events</a> ·
-        <a href="#contact">Contact</a>
-      </p>
-    </footer>
+  <div class="stat-bar">
+    <div class="stat-item">
+      <div class="stat-num">$149</div>
+      <div class="stat-label">One-time founding setup</div>
+    </div>
+    <div class="stat-div"></div>
+    <div class="stat-item">
+      <div class="stat-num">$0</div>
+      <div class="stat-label">Monthly fees</div>
+    </div>
+    <div class="stat-div"></div>
+    <div class="stat-item">
+      <div class="stat-num">$1</div>
+      <div class="stat-label">Order fee (parent pays)</div>
+    </div>
+    <div class="stat-div"></div>
+    <div class="stat-item">
+      <div class="stat-num">375</div>
+      <div class="stat-label">Orders in one real event</div>
+    </div>
   </div>
+
+  <section class="l-section">
+    <div class="l-container center">
+      <p class="section-label">Who it’s for</p>
+      <h2 class="section-title">Two doors. One platform.</h2>
+      <p class="section-body">Pick the path that matches you — both lead to the same ScoopPass app.</p>
+      <div class="card-grid" style="text-align:left; max-width:800px; margin-left:auto; margin-right:auto">
+        <div class="benefit-card">
+          <h3>Vendors</h3>
+          <p>Dessert trucks, bakers, makers — get a branded portal, pre-pay links, and sorted pickup lists.</p>
+          <p style="margin-top:16px"><a class="btn-primary-l" style="padding:12px 20px;font-size:.9rem" href="vendors/">Vendor page →</a></p>
+        </div>
+        <div class="benefit-card">
+          <h3>Schools &amp; fundraisers</h3>
+          <p>PTOs, boosters, churches — run a dessert fundraiser without cash envelopes or catalog chaos.</p>
+          <p style="margin-top:16px"><a class="btn-primary-l" style="padding:12px 20px;font-size:.9rem" href="fundraisers/">Fundraiser page →</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="l-section how-section">
+    <div class="l-container center">
+      <p class="section-label">How it works</p>
+      <h2 class="section-title">From setup to first fundraiser in minutes.</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">01</div>
+          <h3 class="step-title">Get your portal</h3>
+          <p class="step-body">One-time setup. Connect Stripe. Add logo and brand color.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <h3 class="step-title">Create a pre-pay link</h3>
+          <p class="step-body">Photo + description + prices. Unlimited events.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <h3 class="step-title">Share QR or URL</h3>
+          <p class="step-body">Families order on any phone. No app download.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">04</div>
+          <h3 class="step-title">Get paid, pre-sorted</h3>
+          <p class="step-body">Money first. Lists by class, grade, or teacher.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="l-section proof-section">
+    <p class="proof-quote">“A real ScoopPass event — 375 orders, 33 teachers, organized in minutes.”</p>
+    <div class="proof-pill">
+      <div class="proof-num">$0</div>
+      <div class="proof-text">monthly fees, ever. One onboarding fee. Parent pays the small per-order convenience fee.</div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <h2 class="cta-title">Ready when your next<br>event is.</h2>
+    <p class="cta-sub">Founding rate locked through 2026 · Same product as the ScoopPass app</p>
+    <div class="hero-ctas">
+      <a class="btn-primary-l" href="https://app.getscooppass.com/get-started-founding">Get Started — $149 →</a>
+      <a class="btn-secondary-l" href="https://app.getscooppass.com/login">Log in</a>
+    </div>
+  </section>
+
+  <footer class="l-footer">
+    <p>The simplest way to turn any product into a pre-pay fundraiser. Built by a vendor, for vendors.</p>
+    <div class="l-footer-links">
+      <a href="vendors/">Vendors</a>
+      <a href="fundraisers/">Fundraisers</a>
+      <a href="https://app.getscooppass.com/get-started-founding">Sign up</a>
+      <a href="mailto:rondavubakery@gmail.com">rondavubakery@gmail.com</a>
+    </div>
+  </footer>
 </body>
 </html>
