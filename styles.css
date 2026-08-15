@@ -25,11 +25,11 @@ img { max-width: 100%; display: block; }
 .l-nav {
   position: sticky; top: 0; z-index: 100;
   display: flex; align-items: center; justify-content: space-between;
-  padding: 16px 24px;
+  padding: 14px 20px;
   background: rgba(255,255,255,.95);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(131,25,73,.1);
-  gap: 12px; flex-wrap: wrap;
+  gap: 10px 16px; flex-wrap: wrap;
 }
 .l-nav-logo {
   font-family: 'Cormorant Garamond', Georgia, serif;
@@ -325,9 +325,43 @@ img { max-width: 100%; display: block; }
 
 @media (max-width: 700px) {
   .stat-div { display: none; }
-  .l-nav { padding: 14px 16px; }
-  .l-hero { padding: 56px 18px 48px; }
-  .l-section { padding: 64px 18px; }
+  .stat-bar { gap: 20px 28px; padding: 20px 16px; }
+  .l-nav {
+    padding: 12px 14px;
+    flex-wrap: nowrap;
+  }
+  .l-nav-logo { font-size: 1.25rem; flex-shrink: 0; }
+  .l-nav-links {
+    gap: 8px;
+    justify-content: flex-end;
+    flex: 1;
+    min-width: 0;
+  }
+  .l-nav-links a:not(.btn-nav) {
+    font-size: .78rem;
+  }
+  /* Keep primary action; hide secondary text links on very small screens if needed */
+  .btn-nav {
+    padding: 8px 12px;
+    font-size: .78rem;
+    white-space: nowrap;
+  }
+  .l-hero { padding: 48px 18px 40px; }
+  .l-section { padding: 56px 18px; }
+  .path-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .path-card .btn-primary-l {
+    width: 100%;
+    justify-content: center;
+  }
   .proof-pill { flex-direction: column; border-radius: 16px; text-align: center; }
   .proof-text { text-align: center; max-width: none; }
+  .hero-ctas { flex-direction: column; align-items: stretch; }
+  .hero-ctas .btn-primary-l,
+  .hero-ctas .btn-secondary-l { justify-content: center; width: 100%; }
+}
+
+@media (max-width: 420px) {
+  .l-nav-links a:not(.btn-nav) { display: none; }
 }
