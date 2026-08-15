@@ -3,152 +3,175 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ScoopPass™ — Pre-Pay Fundraisers for Vendors &amp; Schools</title>
-  <meta name="description" content="ScoopPass is a pre-pay portal for school fundraisers and event vendors. Parents order online. You get exact counts and sorted pickup lists. Founding rate $149.">
+  <title>ScoopPass™ — Pre-Pay Ordering for School Fundraisers &amp; Event Vendors</title>
+  <meta name="description" content="ScoopPass is a pre-pay ordering platform for school fundraisers and event vendors. Families order and pay online before the event. Vendors get exact counts and class-sorted pickup lists.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="home.css">
 </head>
-<body>
+<body class="home">
   <nav class="l-nav">
     <a class="l-nav-logo" href="./">ScoopPass<span>™</span></a>
     <div class="l-nav-links">
-      <a href="vendors/">Vendors</a>
-      <a href="fundraisers/">Fundraisers</a>
+      <a href="vendors/">For vendors</a>
+      <a href="fundraisers/">For fundraisers</a>
       <a href="https://app.getscooppass.com/login">Log in</a>
-      <a class="btn-nav" href="https://app.getscooppass.com/get-started-founding">Get Started — $149</a>
+      <a class="btn-nav" href="#start">Get started</a>
     </div>
   </nav>
 
-  <header class="l-hero">
-    <div class="hero-badge">
-      <span class="badge-dot"></span>
-      <span>Pre-pay fundraiser portal · $149 founding rate</span>
-    </div>
-    <h1>Parents order ahead.<br>You show up <em>ready.</em></h1>
-    <p class="hero-sub">
-      ScoopPass is the pre-pay system for school nights, PTOs, and event vendors.
-      Share a link, collect orders online, and get lists sorted by class or teacher —
-      so you’re not guessing what to make or counting cash at the end.
-    </p>
-    <div class="hero-ctas">
-      <a class="btn-primary-l" href="https://app.getscooppass.com/get-started-founding">Start for $149 →</a>
-      <a class="btn-secondary-l" href="#who">See if it’s for you</a>
+  <!-- HERO: what it is -->
+  <header class="home-hero">
+    <div class="home-hero-inner">
+      <p class="home-eyebrow">Pre-pay ordering platform</p>
+      <h1>
+        ScoopPass lets families <em>order and pay before</em> the fundraiser —
+        so vendors know exact counts and schools skip the cash chaos.
+      </h1>
+      <p class="home-lead">
+        It’s a simple web portal for school nights, PTO dessert sales, and event vendors.
+        You share a link or QR code. Parents order on their phone. On event day you hand out
+        prepaid orders from a list sorted by class or teacher.
+      </p>
+      <div class="home-def">
+        <div class="home-def-label">In one line</div>
+        <p>
+          <strong>ScoopPass = online pre-orders + payment + pickup lists</strong>
+          for fundraiser-style events — not a full POS, not a catalog fundraiser company.
+        </p>
+      </div>
     </div>
   </header>
 
-  <div class="stat-bar">
-    <div class="stat-item">
-      <div class="stat-num">$149</div>
-      <div class="stat-label">One-time founding setup</div>
+  <!-- What you get -->
+  <section class="home-strip">
+    <div class="home-strip-grid">
+      <div class="home-strip-item">
+        <span class="home-strip-num">01</span>
+        <h3>Pre-pay link or QR</h3>
+        <p>Parents order and pay from any phone. No app download. No paper forms.</p>
+      </div>
+      <div class="home-strip-item">
+        <span class="home-strip-num">02</span>
+        <h3>Exact counts early</h3>
+        <p>Know what to make and bring before you show up — less waste, fewer sellouts.</p>
+      </div>
+      <div class="home-strip-item">
+        <span class="home-strip-num">03</span>
+        <h3>Sorted pickup lists</h3>
+        <p>Print orders by class, grade, or teacher. Handing out takes minutes, not chaos.</p>
+      </div>
     </div>
-    <div class="stat-div"></div>
-    <div class="stat-item">
-      <div class="stat-num">$0</div>
-      <div class="stat-label">Monthly fees</div>
-    </div>
-    <div class="stat-div"></div>
-    <div class="stat-item">
-      <div class="stat-num">$1</div>
-      <div class="stat-label">Per order (parent pays)</div>
-    </div>
-    <div class="stat-div"></div>
-    <div class="stat-item">
-      <div class="stat-num">375</div>
-      <div class="stat-label">Orders in one real event</div>
-    </div>
-  </div>
+  </section>
 
-  <section class="l-section" id="who" style="background:var(--gray-light)">
-    <div class="l-container center">
-      <p class="section-label">Who ScoopPass is for</p>
-      <h2 class="section-title">Vendors who sell. Schools who raise money.</h2>
-      <p class="section-body">
-        Same app either way — pick the page that matches how you’ll use it.
+  <!-- Main funnel -->
+  <section class="home-funnel" id="start">
+    <div class="home-funnel-head">
+      <p class="home-eyebrow dark">Start here</p>
+      <h2>Choose how you’ll use ScoopPass</h2>
+      <p class="home-funnel-sub">
+        Same platform. Two entry points. Pick the page written for you —
+        then sign up or plan your first event from there.
       </p>
-      <div class="path-grid">
-        <div class="path-card">
-          <div class="path-kicker">I sell the product</div>
+    </div>
+
+    <div class="home-funnel-grid">
+      <a class="home-door home-door-vendor" href="vendors/">
+        <div class="home-door-top">
+          <span class="home-door-tag">I sell the product</span>
           <h3>Vendors</h3>
-          <p>Dessert trucks, bakers, makers — run school and community events with pre-pay links and pickup lists that match how you actually work the window.</p>
-          <ul>
-            <li>Branded vendor portal</li>
-            <li>Exact order counts before you prep</li>
-            <li>Sorted by class / teacher</li>
-            <li>Money in before the event</li>
-          </ul>
-          <a class="btn-primary-l" style="padding:12px 18px;font-size:.9rem;margin-top:4px" href="vendors/">I’m a vendor →</a>
+          <p class="home-door-desc">
+            Dessert trucks, bakers, pop-ups, and makers who fulfill school and community events.
+          </p>
         </div>
-        <div class="path-card">
-          <div class="path-kicker">I run the fundraiser</div>
-          <h3>Schools &amp; PTOs</h3>
-          <p>Boosters, churches, and school groups — run a dessert fundraiser without cash envelopes, paper forms, or a volunteer stuck counting money all night.</p>
-          <ul>
-            <li>One link for every family</li>
-            <li>No cash envelopes</li>
-            <li>Clear totals to report</li>
-            <li>Works with your vendor</li>
-          </ul>
-          <a class="btn-primary-l" style="padding:12px 18px;font-size:.9rem;margin-top:4px" href="fundraisers/">I plan fundraisers →</a>
+        <ul class="home-door-list">
+          <li>Your own branded vendor portal</li>
+          <li>Unlimited events &amp; pre-pay links</li>
+          <li>Money deposits to your Stripe before the event</li>
+          <li>One-time founding setup — $0 monthly</li>
+        </ul>
+        <span class="home-door-cta">Continue as a vendor <span aria-hidden="true">→</span></span>
+      </a>
+
+      <a class="home-door home-door-fundraiser" href="fundraisers/">
+        <div class="home-door-top">
+          <span class="home-door-tag">I run the fundraiser</span>
+          <h3>Schools &amp; fundraisers</h3>
+          <p class="home-door-desc">
+            PTOs, boosters, churches, and school groups raising money with a dessert or product sale.
+          </p>
         </div>
+        <ul class="home-door-list">
+          <li>One link for every family channel</li>
+          <li>No cash envelopes or order-form chaos</li>
+          <li>Clear totals you can report to the board</li>
+          <li>Works with your vendor — or get your own portal</li>
+        </ul>
+        <span class="home-door-cta">Continue as a fundraiser <span aria-hidden="true">→</span></span>
+      </a>
+    </div>
+  </section>
+
+  <!-- How it works - short -->
+  <section class="home-how">
+    <div class="home-how-inner">
+      <div class="home-how-copy">
+        <p class="home-eyebrow">How a ScoopPass event runs</p>
+        <h2>From setup to pickup in four steps</h2>
+        <p>
+          Whether you’re the vendor or the school organizer, the flow is the same:
+          set the offer, share the link, collect prepaid orders, fulfill with a sorted list.
+        </p>
       </div>
+      <ol class="home-how-steps">
+        <li>
+          <strong>Create the event</strong>
+          <span>Menu, prices, date, and cutoff go into the portal.</span>
+        </li>
+        <li>
+          <strong>Share the link</strong>
+          <span>Email, Facebook, flyer QR — families order on any phone.</span>
+        </li>
+        <li>
+          <strong>Orders come in paid</strong>
+          <span>Vendors see live counts. Schools see participation grow.</span>
+        </li>
+        <li>
+          <strong>Event-day handoff</strong>
+          <span>Print class/teacher lists and serve prepaid orders fast.</span>
+        </li>
+      </ol>
     </div>
   </section>
 
-  <section class="l-section how-section">
-    <div class="l-container center">
-      <p class="section-label">How it works</p>
-      <h2 class="section-title">Four steps. Then you’re live.</h2>
-      <div class="steps">
-        <div class="step">
-          <div class="step-num">01</div>
-          <h3 class="step-title">Get your portal</h3>
-          <p class="step-body">One-time setup. Connect Stripe. Add your logo.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">02</div>
-          <h3 class="step-title">Build the event</h3>
-          <p class="step-body">Menu, prices, date, and a shareable pre-pay link.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">03</div>
-          <h3 class="step-title">Families order</h3>
-          <p class="step-body">School posts the link or QR. Parents pay on any phone.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">04</div>
-          <h3 class="step-title">You fulfill</h3>
-          <p class="step-body">Print sorted lists. Hand out fast. No cash box chaos.</p>
-        </div>
-      </div>
-    </div>
+  <!-- Proof -->
+  <section class="home-proof">
+    <blockquote>
+      A real ScoopPass event — <em>375 orders, 33 teachers</em>, organized in minutes.
+    </blockquote>
+    <p>Built by a working dessert vendor — not a boardroom product team.</p>
   </section>
 
-  <section class="l-section proof-section">
-    <p class="proof-quote">“A real ScoopPass event — 375 orders, 33 teachers, organized in minutes.”</p>
-    <div class="proof-pill">
-      <div class="proof-num">$0</div>
-      <div class="proof-text">monthly fees. One onboarding fee. Parents pay the small per-order convenience fee.</div>
-    </div>
-  </section>
-
-  <section class="cta-section">
-    <h2 class="cta-title">Ready for your next<br>school night?</h2>
-    <p class="cta-sub">Founding rate through 2026 · Same ScoopPass app vendors already use</p>
-    <div class="hero-ctas">
-      <a class="btn-primary-l" href="https://app.getscooppass.com/get-started-founding">Get Started — $149 →</a>
-      <a class="btn-secondary-l" href="https://app.getscooppass.com/login">Log in</a>
+  <!-- Footer CTA - still routes, doesn't hard-sell signup -->
+  <section class="home-bottom">
+    <h2>Know which door is yours?</h2>
+    <p>Go to the page that matches your role. That’s where pricing, details, and signup live.</p>
+    <div class="home-bottom-actions">
+      <a class="btn-primary-l" href="vendors/">Vendor page →</a>
+      <a class="btn-secondary-l" href="fundraisers/">Fundraiser page →</a>
     </div>
   </section>
 
   <footer class="l-footer">
-    <p>Pre-pay fundraisers without the cash chaos. Built by a vendor, for vendors and the schools they serve.</p>
+    <p>ScoopPass™ — pre-pay ordering for school fundraisers and event vendors.</p>
     <div class="l-footer-links">
       <a href="vendors/">Vendors</a>
       <a href="fundraisers/">Fundraisers</a>
-      <a href="https://app.getscooppass.com/get-started-founding">Sign up</a>
-      <a href="mailto:rondavubakery@gmail.com">rondavubakery@gmail.com</a>
+      <a href="https://app.getscooppass.com/login">Log in</a>
+      <a href="https://app.getscooppass.com/">App home</a>
+      <a href="mailto:rondavubakery@gmail.com">Contact</a>
     </div>
   </footer>
 </body>

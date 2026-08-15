@@ -1,0 +1,456 @@
+/* Homepage-only layout — premium funnel into vendors / fundraisers */
+
+.home {
+  background: #fff;
+  color: var(--ink);
+}
+
+/* ----- Hero ----- */
+.home-hero {
+  padding: 72px 24px 64px;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% -10%, rgba(131, 25, 73, 0.09), transparent 55%),
+    linear-gradient(180deg, #fffdfc 0%, #fdf0f5 100%);
+  border-bottom: 1px solid rgba(131, 25, 73, 0.08);
+}
+.home-hero-inner {
+  max-width: 820px;
+  margin: 0 auto;
+  text-align: left;
+}
+.home-eyebrow {
+  font-family: 'Outfit', system-ui, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--berry);
+  margin: 0 0 20px;
+}
+.home-eyebrow.dark { color: var(--berry); }
+
+.home-hero h1 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 700;
+  font-size: clamp(2.15rem, 5vw, 3.35rem);
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  margin: 0 0 22px;
+  max-width: 18ch;
+}
+.home-hero h1 em {
+  font-style: italic;
+  color: var(--berry);
+}
+
+.home-lead {
+  font-family: 'Outfit', system-ui, sans-serif;
+  font-size: clamp(1.02rem, 2vw, 1.15rem);
+  font-weight: 300;
+  line-height: 1.75;
+  color: var(--gray);
+  margin: 0 0 28px;
+  max-width: 54ch;
+}
+
+.home-def {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 16px 20px;
+  align-items: start;
+  padding: 20px 22px;
+  background: #fff;
+  border: 1px solid rgba(131, 25, 73, 0.12);
+  border-left: 3px solid var(--berry);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(26, 10, 16, 0.04);
+}
+.home-def-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  padding-top: 4px;
+  white-space: nowrap;
+}
+.home-def p {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: var(--ink);
+  font-weight: 400;
+}
+.home-def strong {
+  font-weight: 600;
+}
+
+/* ----- Capability strip ----- */
+.home-strip {
+  padding: 0 24px;
+  margin-top: -1px;
+  background: var(--berry-deep);
+}
+.home-strip-grid {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+}
+.home-strip-item {
+  padding: 36px 28px;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+.home-strip-item:last-child { border-right: none; }
+.home-strip-num {
+  display: block;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--gold);
+  margin-bottom: 12px;
+  line-height: 1;
+}
+.home-strip-item h3 {
+  font-family: 'Outfit', system-ui, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0 0 8px;
+}
+.home-strip-item p {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 300;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+/* ----- Funnel doors ----- */
+.home-funnel {
+  padding: 88px 24px 80px;
+  background: var(--gray-light);
+}
+.home-funnel-head {
+  max-width: 640px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+.home-funnel-head h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(2rem, 4vw, 2.85rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin: 0 0 14px;
+  color: var(--ink);
+}
+.home-funnel-sub {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--gray);
+}
+
+.home-funnel-grid {
+  max-width: 980px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.home-door {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 20px;
+  padding: 32px 28px 28px;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid rgba(131, 25, 73, 0.1);
+  box-shadow: 0 4px 24px rgba(26, 10, 16, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  min-height: 100%;
+}
+.home-door:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(131, 25, 73, 0.12);
+  border-color: rgba(131, 25, 73, 0.25);
+  text-decoration: none;
+}
+.home-door-tag {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--berry);
+  margin-bottom: 12px;
+}
+.home-door h3 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 2.1rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0 0 12px;
+  color: var(--ink);
+  line-height: 1.1;
+}
+.home-door-desc {
+  margin: 0;
+  font-size: 0.98rem;
+  font-weight: 300;
+  line-height: 1.65;
+  color: var(--gray);
+}
+.home-door-top { margin-bottom: 22px; }
+
+.home-door-list {
+  list-style: none;
+  margin: 0 0 28px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+.home-door-list li {
+  position: relative;
+  padding-left: 22px;
+  font-size: 0.92rem;
+  line-height: 1.45;
+  color: var(--ink);
+  font-weight: 400;
+}
+.home-door-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--berry);
+  opacity: 0.85;
+}
+
+.home-door-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+  padding: 14px 18px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background 0.15s ease;
+}
+.home-door-vendor .home-door-cta {
+  background: var(--berry);
+  color: #fff;
+}
+.home-door-vendor:hover .home-door-cta {
+  background: var(--berry-glow);
+}
+.home-door-fundraiser .home-door-cta {
+  background: var(--ink);
+  color: #fff;
+}
+.home-door-fundraiser:hover .home-door-cta {
+  background: #2a1520;
+}
+
+/* ----- How ----- */
+.home-how {
+  padding: 88px 24px;
+  background: #fff;
+}
+.home-how-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 48px 64px;
+  align-items: start;
+}
+.home-how-copy h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(1.9rem, 3.5vw, 2.6rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.12;
+  margin: 0 0 16px;
+}
+.home-how-copy p:last-child {
+  margin: 0;
+  font-size: 1.02rem;
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--gray);
+  max-width: 36ch;
+}
+.home-how-steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: step;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-top: 1px solid var(--berry-light);
+}
+.home-how-steps li {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 8px 16px;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--berry-light);
+  counter-increment: step;
+}
+.home-how-steps li::before {
+  content: counter(step, decimal-leading-zero);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--berry);
+  line-height: 1.2;
+  grid-row: 1 / span 2;
+}
+.home-how-steps strong {
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: var(--ink);
+  grid-column: 2;
+}
+.home-how-steps span {
+  grid-column: 2;
+  font-size: 0.92rem;
+  font-weight: 300;
+  color: var(--gray);
+  line-height: 1.55;
+}
+
+/* ----- Proof ----- */
+.home-proof {
+  padding: 72px 24px;
+  background: var(--berry-deep);
+  text-align: center;
+}
+.home-proof blockquote {
+  margin: 0 auto 18px;
+  max-width: 720px;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(1.55rem, 3.2vw, 2.25rem);
+  font-weight: 600;
+  font-style: normal;
+  line-height: 1.35;
+  color: #fff;
+  letter-spacing: -0.015em;
+}
+.home-proof blockquote em {
+  font-style: italic;
+  color: var(--gold);
+}
+.home-proof > p {
+  margin: 0;
+  font-size: 0.92rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* ----- Bottom ----- */
+.home-bottom {
+  padding: 80px 24px 88px;
+  text-align: center;
+  background: linear-gradient(180deg, #fff 0%, var(--berry-pale) 100%);
+}
+.home-bottom h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(1.9rem, 4vw, 2.75rem);
+  font-weight: 700;
+  margin: 0 0 12px;
+  letter-spacing: -0.02em;
+}
+.home-bottom > p {
+  margin: 0 auto 28px;
+  max-width: 420px;
+  font-size: 1.02rem;
+  font-weight: 300;
+  color: var(--gray);
+  line-height: 1.65;
+}
+.home-bottom-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+/* ----- Responsive ----- */
+@media (max-width: 860px) {
+  .home-strip-grid {
+    grid-template-columns: 1fr;
+  }
+  .home-strip-item {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 28px 8px;
+  }
+  .home-strip-item:last-child { border-bottom: none; }
+  .home-funnel-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+  }
+  .home-how-inner {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+}
+
+@media (max-width: 640px) {
+  .home-hero {
+    padding: 48px 18px 44px;
+  }
+  .home-hero h1 {
+    max-width: none;
+    font-size: clamp(1.85rem, 8vw, 2.35rem);
+  }
+  .home-def {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .home-funnel {
+    padding: 64px 18px 56px;
+  }
+  .home-door {
+    padding: 26px 22px 22px;
+  }
+  .home-door h3 {
+    font-size: 1.75rem;
+  }
+  .home-how {
+    padding: 64px 18px;
+  }
+  .home-proof {
+    padding: 56px 18px;
+  }
+  .home-bottom {
+    padding: 56px 18px 64px;
+  }
+  .home-bottom-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .home-bottom-actions .btn-primary-l,
+  .home-bottom-actions .btn-secondary-l {
+    justify-content: center;
+    width: 100%;
+  }
+  .home-strip {
+    padding: 8px 18px 16px;
+  }
+}
